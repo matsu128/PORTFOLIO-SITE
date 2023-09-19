@@ -1,0 +1,59 @@
+.project-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  align-items: center; /* 垂直方向に中央揃え */
+}
+
+.project-slider::-webkit-scrollbar {
+  display: none; /* Webkitブラウザ用 (Chrome, Safari, etc.) */
+}
+
+.project-item-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d; /* 3Dトランスフォームを有効化 */
+}
+
+.project-item {
+  flex: 0 0 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.stylish-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF; /* ボタンの背景色 */
+  color: #fff; /* ボタンのテキスト色 */
+  text-decoration: none;
+  border: none;
+  border-radius: 50px; /* 球体の形状 */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform-style: preserve-3d; /* 3Dトランスフォームを有効化 */
+}
+
+.stylish-button:hover {
+  background-color: #0056b3; /* ホバー時の背景色 */
+  transform: perspective(500px) rotateY(10deg); /* ホバー時の回転アニメーション */
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000000; /* テキストの色 */
+  text-decoration: none;
+  font-weight: bold; /* フォントを太字に設定（オプション） */
+  font-size: 18px; /* フォントサイズを設定（オプション） */
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform-style: preserve-3d; /* 3Dトランスフォームを有効化 */
+  perspective: 1000px; /* 3D表示のパースペクティブを設定 */
+}
+
+.project-link:hover {
+  color: #40433e; /* ホバー時のテキストの色 */
+  transform: translateY(-5px); /* ホバー時にテキストを浮き上がるように移動 */
+}
+
+

@@ -1,0 +1,17 @@
+.banner {
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+  .banner h1 {
+    font-size: 36px;
+    font-family: 'HalisGR-Thin';
+    color: rgb(0, 0, 0);
+  }
+  
+  .banner p {
+    font-size: 18px;
+    color: rgb(20, 79, 69);
+  }
+  

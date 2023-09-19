@@ -1,0 +1,22 @@
+.responsive-component {
+    /* メニューが表示される画面幅の閾値を設定 */
+    @media (max-width: 768px) {
+    .navbar-menu {
+      flex-direction: column; /* 画面幅が狭い場合は縦に配置 */
+      right: -100%; /* 画面幅が狭い場合は画面外に配置 */
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .navbar-menu.active {
+      right: 0;
+    }
+  
+    .navbar-item {
+      margin: 10px 0;
+      margin-left: 0; /* 縦配置の場合は左マージンを0に設定 */
+    }
+  }
+  
+  }
+  

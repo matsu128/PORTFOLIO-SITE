@@ -1,0 +1,54 @@
+.footer {
+    color: rgb(5, 4, 4); /* テキスト色 */
+    padding: 20px 0; /* 上下のパディング */
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .footer-social {
+    margin-top: 10px;
+  }
+  
+  .social-link {
+    color: rgb(194, 185, 185);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .social-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+  }
+  
+  /* レスポンシブデザインの例 */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-logo {
+      margin-bottom: 10px;
+    }
+  
+    .social-link {
+      margin: 5px 0;
+      padding: 0.4rem;
+    }
+  }
+  

@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+
+/* ハンバーガーアイコン */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* メニューが開いているときのスタイル */
+.menu-open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ナビゲーションメニュー */
+.header-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-content p {
+  display: inline;
+  font-size: 24px;
+  margin-left: 10px; /* メニューからの間隔を調整 */
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: max-width 0.4s ease-in-out;
+  overflow: hidden;
+  max-width: 0;
+}
+
+.navbar.active {
+  max-width: 100%; /* 適切な幅に調整 */
+}
+
+.navbar-item {
+  margin: 0 10px; /* 項目の間隔を調整 */
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+/* ナビゲーションメニューが横に並ぶスタイル */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* 横に表示 */
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .navbar-item a {
+    font-size: 16px;
+  }
+}

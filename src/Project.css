@@ -1,0 +1,44 @@
+/* Project.css */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ece9e9;
+  overflow: hidden;
+  margin-bottom: 3%;
+  min-height: 100vh;
+}
+
+.project-content {
+  text-align: center;
+  position: relative;
+}
+
+.project-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.931);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-details.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-content h2 {
+  font-size: 24px;
+  color: #070707;
+  margin: 0;
+  font-family: Verdana, 'Arial', sans-serif;
+  position: relative;
+  top: 0;
+}
+
+.back {
+  margin-bottom: 20%;
+}

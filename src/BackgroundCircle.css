@@ -1,0 +1,12 @@
+.background-circle {
+    position: absolute;
+    width: 300vmin; /* 画面横幅の120%の幅を設定して円の直径を大きくする */
+    height: 120vmin; /* 画面縦幅の120%の高さに設定 */
+    background-color: white; /* 円の背景色を白に設定 */
+    border-radius: 50%; /* 円の形状を円形に設定 */
+    top: -20%; /* 初期位置を画面上端から20%の位置に配置 */
+    left: 50%; /* 画面の中央に配置 */
+    transform: translateX(-50%); /* 水平方向に中央に配置 */
+    transition: top 0.3s ease-in-out; /* スクロール時のアニメーションを追加 */
+    z-index: -1;
+  }

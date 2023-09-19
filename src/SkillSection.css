@@ -1,0 +1,130 @@
+/* スキルセクション全体のスタイル */
+.skill-section {
+  /* display: flex; */
+  justify-content: center; /* 中央配置 */
+  position: relative;
+  overflow: hidden;
+  transition: height 0.8s ease;
+  color: rgb(3, 3, 3);
+  font-family: Arial, sans-serif;
+  align-items: flex-start;
+  padding: 20px; /* 上下の余白 */
+  
+}
+
+/* スキルセクションが表示されるときのスタイル */
+.skill-section.show {
+  height: auto;
+}
+
+/* 左カラム */
+.left-column {
+  flex: 1; /* 左カラムが残りのスペースを占有 */
+  box-sizing: border-box; /* パディングを含むボックスサイズ */
+  text-align: center; /* 中央配置 */
+  padding: 20px; /* 左右の余白を追加 */
+}
+
+/* 右カラム */
+.right-column {
+  flex: 1; /* 右カラムが残りのスペースを占有 */
+  box-sizing: border-box; /* パディングを含むボックスサイズ */
+  padding: 20px; /* 左右の余白を追加 */
+}
+
+/* セクションの見出し */
+h2.center-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* カテゴリの見出し */
+.skill-category {
+  margin: 10px 0; /* 上下の余白を追加 */
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+/* カテゴリのタイトル */
+.skill-category h3.title-en,
+.skill-category h3.title-jp {
+  font-size: 24px;
+  margin: 0;
+}
+
+.skill-category h3.title-jp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(11, 10, 10);
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 24px; /* 同じサイズに調整 */
+  z-index: 1;
+  display: none;
+}
+
+.skill-category.active .title-jp {
+  display: block;
+}
+
+.skill-category.active h3.title-en {
+  display: none;
+}
+
+/* スキルリスト */
+.skill-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px; /* インデント */
+}
+
+.skill-item {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* スキルアイテムのマーカー */
+.skill-item::before {
+  content: '\2022';
+  color: #fff;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* 項目をクリックしたときのリスト表示 */
+.skill-category.active .skill-list {
+  display: block;
+}
+
+/* カテゴリが非アクティブのときのスタイル */
+.skill-category:not(.active) .skill-list {
+  display: none;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .skill-section {
+    flex-direction: column; /* モバイルビューではカラムを縦に配置 */
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1; /* カラムは均等に拡張 */
+    padding: 20px; /* モバイルビューでの余白を調整 */
+  }
+
+  /* モバイルビューでカテゴリのタイトルサイズを調整 */
+  .skill-category h3.title-en,
+  .skill-category h3.title-jp {
+    font-size: 20px;
+  }
+
+  .skill-category h3.title-jp {
+    font-size: 20px; /* 同じサイズに調整 */
+  }
+}
